@@ -17,30 +17,32 @@
     >
       <div class="bg-green-100 p-8 rounded shadow-lg">
         <p class="text-2xl">Deposite</p>
-        <p class="text-4xl">$00</p>
+        <p class="text-4xl">$<span id="depositeamount">00</span></p>
       </div>
       <div class="bg-red-100 p-8 rounded shadow-lg">
         <p class="text-2xl">Withdraw</p>
-        <p class="text-4xl">$00</p>
+        <p class="text-4xl">$<span id="withdrawamount">00</span></p>
       </div>
       <div class="bg-purple-100 p-8 rounded shadow-lg">
         <p class="text-2xl">Total balance</p>
-        <p class="text-4xl">$00</p>
+        <p class="text-4xl">$<span id="total_balance">1400</span></p>
       </div>
     </section>
 
-    <section class="mt-16 grid grid-cols-2 container mx-auto gap-4">
+    <section
+      class="mt-16 grid md:grid-cols-2 grid-cols-1 container mx-auto gap-4"
+    >
       <div class="bg-blue-200 rounded shadow-lg p-8">
         <p class="text-2xl">Please Deposite</p>
 
         <input
           class="block my-4 p-2 w-1/2 rounded"
           type="number"
-          id=""
+          id="depositeinput"
           placeholder="$$"
         />
         <button
-          id="loginbutton"
+          id="depositebutton"
           class="inline-block bg-red-400 px-3 py-2 text-white rounded hover:bg-red-500"
         >
           Deposite
@@ -52,11 +54,11 @@
         <input
           class="block my-4 p-2 w-1/2 rounded"
           type="number"
-          id=""
+          id="withdrawinput"
           placeholder="$$"
         />
         <button
-          id="loginbutton"
+          id="Withdrawbutton"
           class="inline-block bg-red-400 px-3 py-2 text-white rounded hover:bg-red-500"
         >
           Withdraw
@@ -66,5 +68,7 @@
 
     <!-- tailwind CDN link  -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom js link  -->
+    <script src="./js/home.js"></script>
   </body>
 </html>
