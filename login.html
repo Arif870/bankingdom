@@ -12,12 +12,27 @@
       <span class="text-red-400 font-semibold">Banking System !</span>
     </h1>
 
-    <section class="bg-red-100 p-4 mt-12 w-1/2 mx-auto rounded">
+    <section class="bg-red-100 p-4 mt-12 w-1/2 mx-auto rounded shadow-lg">
       <div class="text-center">
-        <p class="font-medium">Please Login</p>
-        <input type="text" />
-        <input type="text" />
-        <button>Login</button>
+        <p class="font-medium mb-4 text-2xl">Please Login</p>
+        <input
+          type="text"
+          class="block w-1/2 mx-auto p-2 mb-4"
+          placeholder="Enter your email"
+          id="loginemail"
+        />
+        <input
+          type="password"
+          class="block w-1/2 mx-auto p-2 mb-4"
+          placeholder="Enter your password"
+          id="loginpass"
+        />
+        <button
+          id="loginbutton"
+          class="inline-block bg-red-400 px-3 py-2 text-white rounded hover:bg-red-500"
+        >
+          Login
+        </button>
       </div>
     </section>
 
