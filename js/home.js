@@ -4,22 +4,27 @@ document
     //   deposite section
     const depositeInput = document.getElementById("depositeinput");
     const depositeInputValue = depositeInput.value;
-    const depositeAmount = document.getElementById("depositeamount");
-    const depositeAmountText = depositeAmount.innerText;
 
-    const depositAmountCalculation =
-      parseFloat(depositeInputValue) + parseFloat(depositeAmountText);
-    depositeAmount.innerText = depositAmountCalculation;
+    if (depositeInputValue === "") {
+      alert("Deposite field must not be empty !");
+    } else {
+      const depositeAmount = document.getElementById("depositeamount");
+      const depositeAmountText = depositeAmount.innerText;
 
-    //   clear input field
-    depositeInput.value = "";
+      const depositAmountCalculation =
+        parseFloat(depositeInputValue) + parseFloat(depositeAmountText);
+      depositeAmount.innerText = depositAmountCalculation;
 
-    // total balance section
+      //   clear input field
+      depositeInput.value = "";
 
-    const totalBalance = document.getElementById("total_balance");
-    const totalBalanceText = totalBalance.innerText;
-    totalBalance.innerText =
-      depositAmountCalculation + parseFloat(totalBalanceText);
+      // total balance section
+
+      const totalBalance = document.getElementById("total_balance");
+      const totalBalanceText = totalBalance.innerText;
+      totalBalance.innerText =
+        parseFloat(depositeInputValue) + parseFloat(totalBalanceText);
+    }
   });
 
 //   withdraw section
@@ -29,21 +34,25 @@ document
     const withdrawInput = document.getElementById("withdrawinput");
     const withdrawInputValue = withdrawInput.value;
 
-    const withdrawAmount = document.getElementById("withdrawamount");
-    const withdrawAmountText = withdrawAmount.innerText;
+    if (withdrawInputValue === "") {
+      alert("Withdraw field must not be empty!");
+    } else {
+      const withdrawAmount = document.getElementById("withdrawamount");
+      const withdrawAmountText = withdrawAmount.innerText;
 
-    const withdrawAmountCalculation =
-      parseFloat(withdrawInputValue) + parseFloat(withdrawAmountText);
+      const withdrawAmountCalculation =
+        parseFloat(withdrawInputValue) + parseFloat(withdrawAmountText);
 
-    withdrawAmount.innerText = withdrawAmountCalculation;
+      withdrawAmount.innerText = withdrawAmountCalculation;
 
-    // total balance section
+      // total balance section
 
-    const totalBalance = document.getElementById("total_balance");
-    const totalBalanceText = totalBalance.innerText;
+      const totalBalance = document.getElementById("total_balance");
+      const totalBalanceText = totalBalance.innerText;
 
-    totalBalance.innerText =
-      parseFloat(totalBalanceText) - withdrawAmountCalculation;
+      totalBalance.innerText =
+        parseFloat(totalBalanceText) - parseFloat(withdrawInputValue);
 
-    withdrawInput.value = "";
+      withdrawInput.value = "";
+    }
   });
